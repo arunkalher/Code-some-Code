@@ -1,1 +1,1 @@
-Episode1    -   Kadane's Algorithm
+Kadane's Algorithm  - Episode 1

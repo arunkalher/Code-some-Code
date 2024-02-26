@@ -9,7 +9,7 @@ Code some Code is an initiative to provide blogs/articles on DSA, C , C++, Java,
 
 ## - [JavaScript](https://github.com/arunkalher/Code-some-Code/tree/main/javascript)
 
-## ## - [C](https://github.com/arunkalher/Code-some-Code/tree/main/C)
+## - [C](https://github.com/arunkalher/Code-some-Code/tree/main/C)
 
 ## Arun Kalher
 - [LinkedIn](https://in.linkedin.com/in/arun-kalher-64117522a)

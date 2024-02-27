@@ -19,13 +19,16 @@
 
 void utility(int arr[])
 {   
-    // Warning 'sizeof' on array function parameter 'arr' will return size of 'int *' 
+    // Warning 'sizeof' on array function
+    // parameter 'arr' will return size of 'int *' 
     // size lost
      printf("%d",sizeof(arr)/sizeof(arr[0])); // 1
 }
 int main()
 {
-    int arr[5]={1,2,3,4,5}; // or int arr[]={1,2,3,4,5} - compiler must be C99 compatible;
+    int arr[5]={1,2,3,4,5}; 
+    // or int arr[]={1,2,3,4,5}
+    // - compiler must be C99 compatible;
     printf("%d",sizeof(arr)/sizeof(arr[0])); //5
     utility(arr);
 
@@ -43,7 +46,8 @@ void utility(int *arr)
 ```C
 void utility(int arr[5])
 {   
-    // Warning 'sizeof' on array function parameter 'arr' will return size of 'int *' 
+    // Warning 'sizeof' on array function 
+    // parameter 'arr' will return size of 'int *' 
     // size lost
      printf("%d",sizeof(arr)/sizeof(arr[0])); // 1
    
@@ -53,7 +57,8 @@ void utility(int arr[5])
 ```C
 void utility(int arr[7])
 {   
-    // Warning 'sizeof' on array function parameter 'arr' will return size of 'int *' 
+    // Warning 'sizeof' on array function
+    // parameter 'arr' will return size of 'int *' 
     // size lost
      printf("%d",sizeof(arr)/sizeof(arr[0])); // 1
      printf("%d",arr[5]); // garbage
@@ -63,7 +68,8 @@ void utility(int arr[7])
 ```C
 void utility(int arr[3])
 {   
-    // Warning 'sizeof' on array function parameter 'arr' will return size of 'int *' 
+    // Warning 'sizeof' on array function 
+    // parameter 'arr' will return size of 'int *' 
     // size lost
      printf("%d",sizeof(arr)/sizeof(arr[0])); // 1
      printf("%d",arr[4]); // still be 5
@@ -90,7 +96,9 @@ int main()
 
 ```
 ```C
-void utility(char str[])  // or char* str or char* [any number] - warning in 0 - although we shoudn't use these
+void utility(char str[])  
+// or char* str or char* [any number] 
+//- warning in 0 - although we shoudn't use these
 {
   
 
@@ -117,7 +125,8 @@ int main()
 ### Passing 2D Array
 
 ```C
-void print(int arr[][4])  // error- int arr[3][] or int arr[][]
+void print(int arr[][4])  
+// error- int arr[3][] or int arr[][]
 {
     int i, j;
     for (i = 0; i < R; i++)
@@ -128,7 +137,8 @@ void print(int arr[][4])  // error- int arr[3][] or int arr[][]
 int main()
 {
     // int arr[][] = {{1, 2, 3,4}, { 5, 6,7,8}, { 9,0,1,2}}; 
-    // Eror - declaration of 'arr' as multidimensional array must have bounds for all dimensions except the first
+    // Eror - declaration of 'arr' as multidimensional 
+    //array must have bounds for all dimensions except the first
     int arr[][4] = {{1, 2, 3,4}, { 5, 6,7,8}, { 9,0,1,2}};
     print(arr);
     return 0;
@@ -156,28 +166,8 @@ int main()
     int arr[][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     int m = 3, n = 3;
  
-    // We can also use "print(&arr[0][0], m, n);" and "print((int *)arr[0], m, n);"
-    print((int *)arr, m, n);
-    return 0;
-}
-```
-
-```C
-#include <stdio.h>
-void print(int *arr, int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-      for (j = 0; j < n; j++)
-        printf("%d ", *((arr+i*n) + j));
-}
- 
-int main()
-{
-    int arr[][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    int m = 3, n = 3;
- 
-    // We can also use "print(&arr[0][0], m, n);" and "print((int *)arr[0], m, n);"
+    // We can also use "print(&arr[0][0], m, n);"
+    // and "print((int *)arr[0], m, n);"
     print((int *)arr, m, n);
     return 0;
 }

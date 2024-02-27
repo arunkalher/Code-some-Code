@@ -1,1 +1,2 @@
-Map- Episode 1
+Array.prototype.map()   -    Episode 1
+Map                     -    Episode 2

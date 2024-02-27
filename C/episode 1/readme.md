@@ -103,3 +103,19 @@ int main()
 
 }
 ```
+```C
+struct Point
+{
+   int x ;  
+   int y ;
+   char quadrant[10];  
+};
+int main()
+{   
+    struct Point p1={.y=2,.x=1};
+    strcpy(p1.quadrant,"first");
+    printf("%d,%d",p1.x,p1.y);    //1,2
+
+}
+
+```

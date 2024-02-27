@@ -280,4 +280,4 @@ int main()
 #### Using #pragma pack(1)
 #### Using __attribute((packed))__
 
-#### [More Info here](https://github.com/arunkalher/Code-some-Code/tree/main/C/episode%204)
+#### [More Info here](https://github.com/arunkalher/Code-some-Code/tree/main/C/episode4)

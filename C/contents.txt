@@ -1,2 +1,3 @@
-Structure in C  -   Episode 1
-typedef         -   Episode 2
+Structure in C              -   Episode 1
+Passing array to Functions  -   Episode 3
+typedef                     -   Episode 2

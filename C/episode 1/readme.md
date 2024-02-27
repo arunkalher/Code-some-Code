@@ -281,3 +281,59 @@ int main()
 #### Using __attribute((packed))__
 
 #### [More Info here](https://github.com/arunkalher/Code-some-Code/tree/main/C/episode4)
+
+
+Bit Fields
+Bit Fields are used to specify the length of the structure members in bits. When we know the maximum length of the member, we can use bit fields to specify the size and reduce memory consumption.
+
+### Syntax of Bit Fields
+```C
+struct structure_name {
+    data_type member_name: width_of_bit-field;
+};
+```
+### Example of Bit Fields
+```C 
+// C Program to illustrate bit fields in structures 
+#include <stdio.h> 
+  
+// declaring structure for reference 
+struct str1 { 
+    int a; 
+    char c; 
+}; 
+  
+// structure with bit fields 
+struct str2 { 
+    int a : 24; // size of 'a' is 3 bytes = 24 bits 
+    char c; 
+}; 
+  
+// driver code 
+int main() 
+{ 
+    printf("Size of Str1: %d\nSize of Str2: %d", 
+           sizeof(struct str1), sizeof(struct str2)); //8,4
+    return 0; 
+}
+```
+
+#### As we can see, the size of the structure is reduced when using the bit field to define the max size of the member ‘a’.
+
+## Uses of Structure in C
+
+
+#### - The structure can be used to define the custom data types that can be used to create some complex data types such as dates, time, complex numbers, etc. which are not present in the language.
+#### - It can also be used in data organization where a large amount of data can be stored in different fields.
+#### - Structures are used to create data structures such as trees, linked lists, etc.
+#### - They can also be used for returning multiple values from a function.
+
+## Limitations of C Structures
+
+#### In C language, structures provide a method for packing together data of different types. A Structure is a helpful tool to handle a group of logically related data items. However, C structures also have some limitations.
+
+#### - Higher Memory Consumption: It is due to structure padding.
+#### - No Data Hiding: C Structures do not permit data hiding. #### - Structure members can be accessed by any function, anywhere in the scope of the structure.
+#### - Functions inside Structure: C structures do not permit functions inside the structure so we cannot provide the associated functions.
+#### - Static Members: C Structure cannot have static members inside its body.
+#### - Construction creation in Structure: Structures in C cannot have a constructor inside Structures.

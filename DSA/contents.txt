@@ -1,1 +1,2 @@
 Kadane's Algorithm  - Episode 1
+Topological Sorting - Episode 2

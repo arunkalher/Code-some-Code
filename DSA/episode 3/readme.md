@@ -46,7 +46,7 @@ class Solution {
 ```
 
 #### Time Complexity: O(V+E)
-#### Auxiliary space: O(V)-2*O(V)-visited array and check array
+#### Auxiliary space: 2*O(V)-visited array and check array
 
 ## Method 2 - can use a unordered set also
 
@@ -97,4 +97,4 @@ class Solution {
 ```
 
 #### Time Complexity: O(V+E)
-#### Auxiliary space: O(V)-2*O(V)-visited array and unordered_set
+#### Auxiliary space: 2*O(V)-visited array and unordered_set

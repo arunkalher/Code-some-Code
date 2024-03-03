@@ -1,2 +1,3 @@
+Detect cycle in a directed graph - Episode 3
 Kadane's Algorithm  - Episode 1
 Topological Sorting - Episode 2

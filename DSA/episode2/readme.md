@@ -96,3 +96,41 @@ int Indegree[V]={0};
 
 ```
 
+bool dfs(int curr,vector<int>* adj,bool* visited,vector<bool> &cycle)
+    {  
+        
+        if(cycle[curr])
+        return true;
+        
+        cycle[curr]=true;
+        if(visited[curr])
+        {
+            cycle[curr]=false;
+        
+        return false;
+        }
+        visited[curr]=true;
+        for(auto i:adj[curr])
+        {   
+            
+            if(dfs(i,adj,visited,cycle))
+            return true;
+        }
+      
+        cycle[curr]=false;
+        return false;
+        
+    }
+    bool isCyclic(int V, vector<int> adj[]) {
+        // code here
+        bool visited[V]={false};
+        for(int i=0;i<V;i++)
+        {   
+            vector<bool> cycle(V,false);
+            if(!visited[i] && dfs(i,adj,visited,cycle))
+            return true;
+            
+        }
+        
+        return false;
+    }
